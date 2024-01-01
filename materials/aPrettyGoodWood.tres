@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://cpxg0dtyr2g8n"]
+
+[ext_resource type="Texture2D" uid="uid://dpudbjft768st" path="res://materials/VeneerWhiteOakRandomMatched001_COL_2K_METALNESS.png" id="1_3ifyf"]
+[ext_resource type="Texture2D" uid="uid://dbptk0fxowbhn" path="res://materials/VeneerWhiteOakRandomMatched001_AO_2K_METALNESS.png" id="2_idr67"]
+[ext_resource type="Texture2D" uid="uid://cc0j4uh6us0v7" path="res://materials/VeneerWhiteOakRandomMatched001_METALNESS_2K_METALNESS.png" id="3_qb3y7"]
+[ext_resource type="Texture2D" uid="uid://bq1ev38s35i87" path="res://materials/VeneerWhiteOakRandomMatched001_NRM_2K_METALNESS.png" id="4_x0ij4"]
+[ext_resource type="Texture2D" uid="uid://ca0mp7c5c7npc" path="res://materials/VeneerWhiteOakRandomMatched001_ROUGHNESS_2K_METALNESS.png" id="5_bq8w7"]
+
+[resource]
+albedo_texture = ExtResource("1_3ifyf")
+metallic = 1.0
+metallic_texture = ExtResource("3_qb3y7")
+roughness_texture = ExtResource("5_bq8w7")
+normal_enabled = true
+normal_texture = ExtResource("4_x0ij4")
+ao_enabled = true
+ao_texture = ExtResource("2_idr67")

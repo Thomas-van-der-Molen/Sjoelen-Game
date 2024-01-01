@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://bd1i86vqqlys3"]
+
+[ext_resource type="Script" path="res://scripts/PuckScript.gd" id="1_npepr"]
+[ext_resource type="Material" uid="uid://cpxg0dtyr2g8n" path="res://materials/aPrettyGoodWood.tres" id="2_id8t4"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rmec1"]
+friction = 0.1
+rough = true
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_swihn"]
+height = 0.289
+radius = 0.525258
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_13ulw"]
+
+[node name="RigidBody3D" type="RigidBody3D"]
+physics_material_override = SubResource("PhysicsMaterial_rmec1")
+max_contacts_reported = 4
+contact_monitor = true
+script = ExtResource("1_npepr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_swihn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.047, 0, 0, 0, 0.14, 0, 0, 0, 1.047, 0, 0, 0)
+mesh = SubResource("CylinderMesh_13ulw")
+surface_material_override/0 = ExtResource("2_id8t4")
